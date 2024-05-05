@@ -1,0 +1,154 @@
+{
+  "@context" : {
+    "Inflight_Entertainment" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Inflight_Entertainment"
+    },
+    "Seat_Comfort" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Seat_Comfort",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Verified" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Verified"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Review"
+    },
+    "Max_Rating" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Max_Rating"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Country",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Comment" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Comment"
+    },
+    "fliesOn" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/fliesOn",
+      "@type" : "@id"
+    },
+    "Passenger_Country" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Passenger_Country"
+    },
+    "Recommended" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Recommended",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "_Connectivity" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity"
+    },
+    "reviewDate" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/reviewDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "flightNumber" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/flightNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Title" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Title"
+    },
+    "RequiresAttention" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/RequiresAttention"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Destination",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Type_Of_Traveller" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Type_Of_Traveller"
+    },
+    "hasReview" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/hasReview",
+      "@type" : "@id"
+    },
+    "Seat_Type" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Seat_Type"
+    },
+    "Date_Flown" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Date_Flown",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Origin" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Origin"
+    },
+    "Trip_verified" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Trip_verified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Review_Body" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Review_Body"
+    },
+    "reviewOfFlight" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/reviewOfFlight",
+      "@type" : "@id"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "reviewRating" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/reviewRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Comment_title" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Comment_title"
+    },
+    "FrequentDelayVictim" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/FrequentDelayVictim"
+    },
+    "Passenger" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Passenger"
+    },
+    "Ground_Service" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Ground_Service"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Rating"
+    },
+    "_Beverages" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Aircraft"
+    },
+    "Cabin_Staff_Service" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Cabin_Staff_Service",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Airline" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Airline"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Flight"
+    },
+    "Value_For_Money" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Value_For_Money"
+    },
+    "_Name" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Service" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Service"
+    },
+    "Date_Published" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Date_Published"
+    },
+    "Overall_Rating" : {
+      "@id" : "http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/Overall_Rating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  }
+}
