@@ -1,0 +1,463 @@
+Prefix(:=<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5>
+
+Declaration(Class(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#FrequentDelayVictim>))
+Declaration(Class(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#RequiresAttention>))
+Declaration(Class(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages>))
+Declaration(Class(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity>))
+Declaration(Class(:Aircraft))
+Declaration(Class(:Airline))
+Declaration(Class(:Cabin_Staff_Service))
+Declaration(Class(:Comment))
+Declaration(Class(:Comment_title))
+Declaration(Class(:Country))
+Declaration(Class(:Date_Flown))
+Declaration(Class(:Date_Published))
+Declaration(Class(:Destination))
+Declaration(Class(:Flight))
+Declaration(Class(:Ground_Service))
+Declaration(Class(:Inflight_Entertainment))
+Declaration(Class(:Max_Rating))
+Declaration(Class(:Origin))
+Declaration(Class(:Overall_Rating))
+Declaration(Class(:Passenger))
+Declaration(Class(:Passenger_Country))
+Declaration(Class(:Rating))
+Declaration(Class(:Recommended))
+Declaration(Class(:Review))
+Declaration(Class(:Review_Body))
+Declaration(Class(:Seat_Comfort))
+Declaration(Class(:Seat_Type))
+Declaration(Class(:Service))
+Declaration(Class(:Title))
+Declaration(Class(:Trip_verified))
+Declaration(Class(:Type_Of_Traveller))
+Declaration(Class(:Value_For_Money))
+Declaration(Class(:Verified))
+Declaration(ObjectProperty(:fliesOn))
+Declaration(ObjectProperty(:hasReview))
+Declaration(ObjectProperty(:reviewOfFlight))
+Declaration(DataProperty(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages>))
+Declaration(DataProperty(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name>))
+Declaration(DataProperty(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity>))
+Declaration(DataProperty(:Cabin_Staff_Service))
+Declaration(DataProperty(:Country))
+Declaration(DataProperty(:Date_Flown))
+Declaration(DataProperty(:Destination))
+Declaration(DataProperty(:Overall_Rating))
+Declaration(DataProperty(:Recommended))
+Declaration(DataProperty(:Seat_Comfort))
+Declaration(DataProperty(:Trip_verified))
+Declaration(DataProperty(:flightNumber))
+Declaration(DataProperty(:reviewDate))
+Declaration(DataProperty(:reviewRating))
+Declaration(NamedIndividual(:Eugene_Tan))
+Declaration(NamedIndividual(:FlightQA001))
+Declaration(NamedIndividual(:FoodBeverages001))
+Declaration(NamedIndividual(:Review001))
+Declaration(NamedIndividual(:Wayne_Burgess))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :fliesOn (Flies On)
+
+AnnotationAssertion(rdfs:comment :fliesOn "Associates a passenger with a specific flight they have taken. This property helps in tracking the flights on which a passenger was a traveler, providing a direct connection between the individual and the flight details.")
+AnnotationAssertion(rdfs:label :fliesOn "Flies On")
+SubObjectPropertyOf(:fliesOn owl:topObjectProperty)
+ObjectPropertyDomain(:fliesOn :Passenger)
+ObjectPropertyRange(:fliesOn :Flight)
+
+# Object Property: :hasReview (Has Review)
+
+AnnotationAssertion(rdfs:comment :hasReview "Connects a passenger to a review they have authored. This property links the passenger who wrote the review with the actual feedback provided.")
+AnnotationAssertion(rdfs:label :hasReview "Has Review")
+SubObjectPropertyOf(:hasReview owl:topObjectProperty)
+ObjectPropertyDomain(:hasReview :Passenger)
+ObjectPropertyRange(:hasReview :Review)
+
+# Object Property: :reviewOfFlight (Review of Flight)
+
+AnnotationAssertion(rdfs:comment :reviewOfFlight "Links to a review of the flight it belongs to.This property associates a specific review with the corresponding flight, which will allow detailed analysis of passenger experiences based on individual flights.")
+AnnotationAssertion(rdfs:label :reviewOfFlight "Review of Flight")
+SubObjectPropertyOf(:reviewOfFlight owl:topObjectProperty)
+ObjectPropertyDomain(:reviewOfFlight :Review)
+ObjectPropertyRange(:reviewOfFlight :Flight)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> (Food & Beverages)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> "Rate the quality of food and beverages that the passenger drinks and eats.")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> "Food & Beverages")
+SubDataPropertyOf(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> owl:topDataProperty)
+DataPropertyDomain(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages>)
+DataPropertyRange(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> xsd:decimal)
+
+# Data Property: <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> (Name of the Food & Beverages)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> "Indicates the name of the foods and beverages that the passenger drinks and eats.")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> "Name of the Food & Beverages")
+SubDataPropertyOf(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> owl:topDataProperty)
+DataPropertyDomain(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages>)
+DataPropertyRange(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> xsd:string)
+
+# Data Property: <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> (WiFi & Connectivity)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> "Evaluates the availability and quality of WiFi and other connectivity options on board.")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> "WiFi & Connectivity")
+SubDataPropertyOf(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> owl:topDataProperty)
+DataPropertyDomain(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity>)
+DataPropertyRange(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> xsd:decimal)
+
+# Data Property: :Cabin_Staff_Service (Cabin Staff Service)
+
+AnnotationAssertion(rdfs:comment :Cabin_Staff_Service "Reflects on the performance and friendliness of the cabin crew.")
+AnnotationAssertion(rdfs:label :Cabin_Staff_Service "Cabin Staff Service")
+SubDataPropertyOf(:Cabin_Staff_Service owl:topDataProperty)
+DataPropertyDomain(:Cabin_Staff_Service :Cabin_Staff_Service)
+DataPropertyRange(:Cabin_Staff_Service xsd:decimal)
+
+# Data Property: :Country (Country of residence)
+
+AnnotationAssertion(rdfs:comment :Country "The country where the passenger resides, which may influence their travel preferences and perspectives.")
+AnnotationAssertion(rdfs:label :Country "Country of residence")
+SubDataPropertyOf(:Country owl:topDataProperty)
+DataPropertyDomain(:Country :Country)
+DataPropertyRange(:Country xsd:string)
+
+# Data Property: :Date_Flown (Date Flown)
+
+AnnotationAssertion(rdfs:comment :Date_Flown "The date on which the flight took place.")
+AnnotationAssertion(rdfs:label :Date_Flown "Date Flown")
+SubDataPropertyOf(:Date_Flown owl:topDataProperty)
+DataPropertyDomain(:Date_Flown :Flight)
+DataPropertyRange(:Date_Flown xsd:string)
+
+# Data Property: :Destination (:Destination)
+
+AnnotationAssertion(rdfs:comment :Destination "Destination")
+AnnotationAssertion(rdfs:comment :Destination "The arrival location of the flight.")
+SubDataPropertyOf(:Destination owl:topDataProperty)
+DataPropertyDomain(:Destination :Flight)
+DataPropertyRange(:Destination xsd:string)
+
+# Data Property: :Overall_Rating (Overall Rating)
+
+AnnotationAssertion(rdfs:comment :Overall_Rating "An aggregate score reflecting the total satisfaction level of the passenger.")
+AnnotationAssertion(rdfs:label :Overall_Rating "Overall Rating")
+SubDataPropertyOf(:Overall_Rating owl:topDataProperty)
+DataPropertyDomain(:Overall_Rating :Flight)
+DataPropertyRange(:Overall_Rating xsd:integer)
+
+# Data Property: :Recommended (Recommended)
+
+AnnotationAssertion(rdfs:comment :Recommended "Indicates whether the passenger would recommend the airline to others.")
+AnnotationAssertion(rdfs:label :Recommended "Recommended")
+SubDataPropertyOf(:Recommended owl:topDataProperty)
+DataPropertyDomain(:Recommended :Recommended)
+DataPropertyRange(:Recommended xsd:boolean)
+
+# Data Property: :Seat_Comfort (Seat Comfort)
+
+AnnotationAssertion(rdfs:comment :Seat_Comfort "Describes the comfort level of the airplane seating.")
+AnnotationAssertion(rdfs:label :Seat_Comfort "Seat Comfort")
+SubDataPropertyOf(:Seat_Comfort owl:topDataProperty)
+DataPropertyDomain(:Seat_Comfort :Seat_Comfort)
+DataPropertyRange(:Seat_Comfort xsd:decimal)
+
+# Data Property: :Trip_verified (Trip Verified)
+
+AnnotationAssertion(rdfs:comment :Trip_verified "Indicates whether the details of the flight have been verified as part of a review process, ensuring the authenticity of the information provided.")
+AnnotationAssertion(rdfs:label :Trip_verified "Trip Verified")
+SubDataPropertyOf(:Trip_verified owl:topDataProperty)
+DataPropertyDomain(:Trip_verified :Flight)
+DataPropertyRange(:Trip_verified xsd:string)
+
+# Data Property: :flightNumber (Flight Number)
+
+AnnotationAssertion(rdfs:comment :flightNumber "Identifies the specific flight by its unique alphanumeric code.")
+AnnotationAssertion(rdfs:label :flightNumber "Flight Number")
+SubDataPropertyOf(:flightNumber owl:topDataProperty)
+DataPropertyDomain(:flightNumber :Flight)
+DataPropertyRange(:flightNumber xsd:string)
+
+# Data Property: :reviewDate (Review Date)
+
+AnnotationAssertion(rdfs:comment :reviewDate "The date on which the review was posted by the passenger.")
+AnnotationAssertion(rdfs:label :reviewDate "Review Date")
+SubDataPropertyOf(:reviewDate owl:topDataProperty)
+DataPropertyDomain(:reviewDate :Review)
+DataPropertyRange(:reviewDate xsd:string)
+
+# Data Property: :reviewRating (Review Rating)
+
+AnnotationAssertion(rdfs:comment :reviewRating "A numeric value given by a passenger to rate their overall satisfaction with the flight. This rating is typically on a scale from 1 to 10, where 10 represents the highest level of satisfaction.")
+AnnotationAssertion(rdfs:label :reviewRating "Review Rating")
+SubDataPropertyOf(:reviewRating owl:topDataProperty)
+DataPropertyDomain(:reviewRating :Review)
+DataPropertyRange(:reviewRating xsd:integer)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#FrequentDelayVictim> (Frequent Delay Victim)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#FrequentDelayVictim> "Identifies individuals who have frequently experienced delayed flights. This class is used to categorize passengers based on their unfortunate consistent experience with delays, allowing for targeted customer service interventions such as compensations or personalized communications.")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#FrequentDelayVictim> "Frequent Delay Victim")
+SubClassOf(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#FrequentDelayVictim> :Passenger)
+
+# Class: <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#RequiresAttention> (Requires Attention)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#RequiresAttention> "Identify if a flight needs special attention due to negative reviews or other operational concerns. This classification helps prioritize flights for review and intervention by the airline's operational.")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#RequiresAttention> "Requires Attention")
+SubClassOf(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#RequiresAttention> :Flight)
+
+# Class: <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> (Food & Beverages)
+
+SubClassOf(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> :Service)
+
+# Class: <http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> (WiFi & Connectivity)
+
+SubClassOf(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> :Service)
+
+# Class: :Aircraft (Aircraft)
+
+AnnotationAssertion(rdfs:comment :Aircraft "Specifies the model of aircraft used for the flight.")
+AnnotationAssertion(rdfs:label :Aircraft "Aircraft")
+SubClassOf(:Aircraft :Flight)
+
+# Class: :Airline (Airline)
+
+AnnotationAssertion(rdfs:comment :Airline "Represents an airline company that operates flights. This class can include properties that describe the airline, such as its verification status, etc.")
+AnnotationAssertion(rdfs:label :Airline "Airline")
+
+# Class: :Cabin_Staff_Service (Cabin Staff Service)
+
+SubClassOf(:Cabin_Staff_Service :Service)
+
+# Class: :Comment (Comment)
+
+AnnotationAssertion(rdfs:comment :Comment "A detailed comment about the flight experience.")
+AnnotationAssertion(rdfs:label :Comment "Comment")
+SubClassOf(:Comment :Review)
+
+# Class: :Comment_title (Comment Title)
+
+AnnotationAssertion(rdfs:comment :Comment_title "A brief headline for the comment provided by the passenger, summarizing the essence of their feedback.")
+AnnotationAssertion(rdfs:label :Comment_title "Comment Title")
+SubClassOf(:Comment_title :Review)
+
+# Class: :Country (Country of residence)
+
+SubClassOf(:Country :Passenger)
+
+# Class: :Date_Flown (Date Flown)
+
+SubClassOf(:Date_Flown :Flight)
+
+# Class: :Date_Published (Date Published)
+
+AnnotationAssertion(rdfs:comment :Date_Published "The date on which the review was published.")
+AnnotationAssertion(rdfs:label :Date_Published "Date Published")
+SubClassOf(:Date_Published :Review)
+
+# Class: :Destination (:Destination)
+
+SubClassOf(:Destination :Flight)
+
+# Class: :Flight (Flight)
+
+AnnotationAssertion(rdfs:comment :Flight "Represents an instance of an airline flight, containing details about the flight's origin, destination, date flown and the aircraft.")
+AnnotationAssertion(rdfs:label :Flight "Flight")
+
+# Class: :Ground_Service (Ground Service)
+
+AnnotationAssertion(rdfs:comment :Ground_Service "Evaluates the efficiency and quality of airport ground services.")
+AnnotationAssertion(rdfs:label :Ground_Service "Ground Service")
+SubClassOf(:Ground_Service :Service)
+
+# Class: :Inflight_Entertainment (Inflight Entertainment)
+
+AnnotationAssertion(rdfs:comment :Inflight_Entertainment "Assesses the quality and variety of entertainment options available during the flight.")
+AnnotationAssertion(rdfs:label :Inflight_Entertainment "Inflight Entertainment")
+SubClassOf(:Inflight_Entertainment :Service)
+
+# Class: :Max_Rating (Max Rating)
+
+AnnotationAssertion(rdfs:comment :Max_Rating "The highest possible rating on the review scale.")
+AnnotationAssertion(rdfs:label :Max_Rating "Max Rating")
+SubClassOf(:Max_Rating :Review)
+
+# Class: :Origin (Origin)
+
+AnnotationAssertion(rdfs:comment :Origin "The departure location of the flight.")
+AnnotationAssertion(rdfs:label :Origin "Origin")
+SubClassOf(:Origin :Flight)
+
+# Class: :Overall_Rating (Overall Rating)
+
+SubClassOf(:Overall_Rating :Review)
+
+# Class: :Passenger (Passenger)
+
+AnnotationAssertion(rdfs:comment :Passenger "Represents a person who travels on a plane. Attributes may include the type of traveller and their country of origin.")
+AnnotationAssertion(rdfs:label :Passenger "Passenger")
+SubClassOf(:Passenger ObjectMinCardinality(1 :fliesOn :Flight))
+SubClassOf(:Passenger ObjectMinCardinality(1 :hasReview :Review))
+
+# Class: :Passenger_Country (Passenger Country)
+
+AnnotationAssertion(rdfs:comment :Passenger_Country "The country of origin/birth of the passenger.")
+AnnotationAssertion(rdfs:label :Passenger_Country "Passenger Country")
+SubClassOf(:Passenger_Country :Passenger)
+
+# Class: :Rating (Rating)
+
+AnnotationAssertion(rdfs:comment :Rating "A numerical rating given by the passenger for the overall flight experience.")
+AnnotationAssertion(rdfs:label :Rating "Rating")
+SubClassOf(:Rating :Review)
+
+# Class: :Recommended (Recommended)
+
+SubClassOf(:Recommended :Review)
+
+# Class: :Review (Review)
+
+AnnotationAssertion(rdfs:comment :Review "Contains information about a passenger's review of a flight. This includes ratings, comments, and publication details.")
+AnnotationAssertion(rdfs:label :Review "Review")
+
+# Class: :Review_Body (Review Body)
+
+AnnotationAssertion(rdfs:comment :Review_Body "The main content of the review, where the passenger details their full experience and observations about the flight.")
+AnnotationAssertion(rdfs:label :Review_Body "Review Body")
+SubClassOf(:Review_Body :Review)
+
+# Class: :Seat_Comfort (Seat Comfort)
+
+SubClassOf(:Seat_Comfort :Service)
+
+# Class: :Seat_Type (Seat Type)
+
+AnnotationAssertion(rdfs:comment :Seat_Type "The type of seat the passenger had during the flight, e.g., economy, business.")
+AnnotationAssertion(rdfs:label :Seat_Type "Seat Type")
+SubClassOf(:Seat_Type :Service)
+
+# Class: :Service (Service)
+
+AnnotationAssertion(rdfs:comment :Service "Represents various aspects of service provided during the flight, rated by passengers.")
+AnnotationAssertion(rdfs:label :Service "Service")
+
+# Class: :Title (Title)
+
+AnnotationAssertion(rdfs:comment :Title "The title of the review provided by the passenger.")
+AnnotationAssertion(rdfs:label :Title "Title")
+SubClassOf(:Title :Review)
+
+# Class: :Trip_verified (Trip Verified)
+
+SubClassOf(:Trip_verified :Airline)
+
+# Class: :Type_Of_Traveller (Type of Traveller)
+
+AnnotationAssertion(rdfs:comment :Type_Of_Traveller "Describes the travel context of the passenger, such as business or leisure.")
+AnnotationAssertion(rdfs:label :Type_Of_Traveller "Type of Traveller")
+SubClassOf(:Type_Of_Traveller :Passenger)
+
+# Class: :Value_For_Money (Value for Money)
+
+AnnotationAssertion(rdfs:comment :Value_For_Money "The passenger's assessment of the overall value for the cost of the flight.")
+AnnotationAssertion(rdfs:label :Value_For_Money "Value for Money")
+SubClassOf(:Value_For_Money :Service)
+
+# Class: :Verified (Verified)
+
+AnnotationAssertion(rdfs:comment :Verified "Indicates whether the airline's profile has been officially verified.")
+AnnotationAssertion(rdfs:label :Verified "Verified")
+SubClassOf(:Verified :Airline)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Eugene_Tan (:Eugene_Tan)
+
+ClassAssertion(:Passenger :Eugene_Tan)
+ObjectPropertyAssertion(:fliesOn :Eugene_Tan :FlightQA001)
+ObjectPropertyAssertion(:hasReview :Eugene_Tan :Review001)
+ObjectPropertyAssertion(:reviewOfFlight :Eugene_Tan :FlightQA001)
+DataPropertyAssertion(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> :Eugene_Tan "5.0"^^xsd:decimal)
+DataPropertyAssertion(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> :Eugene_Tan "Salad and orange juice")
+DataPropertyAssertion(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> :Eugene_Tan "2.0"^^xsd:decimal)
+DataPropertyAssertion(:Cabin_Staff_Service :Eugene_Tan "3.0"^^xsd:decimal)
+DataPropertyAssertion(:Country :Eugene_Tan "Lisbon")
+DataPropertyAssertion(:Date_Flown :Eugene_Tan "03-01-2024")
+DataPropertyAssertion(:Destination :Eugene_Tan "Manchester")
+DataPropertyAssertion(:Overall_Rating :Eugene_Tan "9"^^xsd:integer)
+DataPropertyAssertion(:Recommended :Eugene_Tan "false"^^xsd:boolean)
+DataPropertyAssertion(:Seat_Comfort :Eugene_Tan "3.0"^^xsd:decimal)
+DataPropertyAssertion(:Trip_verified :Eugene_Tan "Not Verified")
+DataPropertyAssertion(:flightNumber :Eugene_Tan "FlightQA003")
+
+# Individual: :FlightQA001 (:FlightQA001)
+
+ClassAssertion(:Flight :FlightQA001)
+DataPropertyAssertion(:Date_Flown :FlightQA001 "March 2024")
+DataPropertyAssertion(:Date_Flown :FlightQA001 "2024-03-02")
+DataPropertyAssertion(:Destination :FlightQA001 "London Heathrow via Doha")
+DataPropertyAssertion(:flightNumber :FlightQA001 "FlightQA001")
+
+# Individual: :FoodBeverages001 (:FoodBeverages001)
+
+ClassAssertion(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> :FoodBeverages001)
+ObjectPropertyAssertion(:reviewOfFlight :FoodBeverages001 :FoodBeverages001)
+DataPropertyAssertion(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages> :FoodBeverages001 "4.0"^^xsd:decimal)
+DataPropertyAssertion(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> :FoodBeverages001 "Pasta, chicken and water")
+
+# Individual: :Review001 (:Review001)
+
+ClassAssertion(:Review :Review001)
+DataPropertyAssertion(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Food_&_Beverages:_Name> :Review001 "Fish and water")
+DataPropertyAssertion(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#Wifi_&_Connectivity> :Review001 "1.0"^^xsd:decimal)
+DataPropertyAssertion(:Cabin_Staff_Service :Review001 "3.0"^^xsd:decimal)
+DataPropertyAssertion(:Country :Review001 "Spain")
+DataPropertyAssertion(:Destination :Review001 "United States")
+DataPropertyAssertion(:Overall_Rating :Review001 "2.0"^^xsd:decimal)
+DataPropertyAssertion(:Recommended :Review001 "false"^^xsd:boolean)
+DataPropertyAssertion(:Seat_Comfort :Review001 "2.0"^^xsd:decimal)
+DataPropertyAssertion(:Trip_verified :Review001 "Trip Verified")
+DataPropertyAssertion(:flightNumber :Review001 "FlightQA004")
+DataPropertyAssertion(:reviewDate :Review001 "2023-01-01")
+DataPropertyAssertion(:reviewRating :Review001 "4.0"^^xsd:decimal)
+
+# Individual: :Wayne_Burgess (:Wayne_Burgess)
+
+ClassAssertion(:Passenger :Wayne_Burgess)
+ObjectPropertyAssertion(:fliesOn :Wayne_Burgess :FlightQA001)
+ObjectPropertyAssertion(:hasReview :Wayne_Burgess :Review001)
+DataPropertyAssertion(:Country :Wayne_Burgess "United Kingdom")
+DataPropertyAssertion(:Date_Flown :Wayne_Burgess "October 2023")
+DataPropertyAssertion(:Destination :Wayne_Burgess "Paris Beauvais")
+DataPropertyAssertion(:flightNumber :Wayne_Burgess "FlightQA002")
+DataPropertyAssertion(:reviewDate :Wayne_Burgess "2024-02-29")
+DataPropertyAssertion(:reviewRating :Wayne_Burgess "1"^^xsd:integer)
+
+
+DLSafeRule(Body(ClassAtom(:Flight Variable(<urn:swrl:var#f>)) ObjectPropertyAtom(:hasReview Variable(<urn:swrl:var#f>) Variable(<urn:swrl:var#r>)) DataPropertyAtom(:reviewRating Variable(<urn:swrl:var#r>) Variable(<urn:swrl:var#rating>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl:var#rating>) "3"^^xsd:integer))Head(ClassAtom(:Recommended Variable(<urn:swrl:var#f>))))
+DLSafeRule(Body(ClassAtom(:Flight Variable(<urn:swrl:var#f>)) ObjectPropertyAtom(:hasReview Variable(<urn:swrl:var#f>) Variable(<urn:swrl:var#r1>)) DataPropertyAtom(:reviewRating Variable(<urn:swrl:var#r1>) Variable(<urn:swrl:var#rating1>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(<urn:swrl:var#rating1>) "3"^^xsd:integer) ObjectPropertyAtom(:hasReview Variable(<urn:swrl:var#f>) Variable(<urn:swrl:var#r2>)) DataPropertyAtom(:reviewRating Variable(<urn:swrl:var#r2>) Variable(<urn:swrl:var#rating2>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(<urn:swrl:var#rating2>) "3"^^xsd:integer))Head(ClassAtom(<http://www.semanticweb.org/usuario/ontologies/2024/3/untitled-ontology-5#RequiresAttention> Variable(<urn:swrl:var#f>))))
+)
